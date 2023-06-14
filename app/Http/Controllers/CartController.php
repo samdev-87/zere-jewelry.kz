@@ -13,19 +13,20 @@ class CartController extends Controller
     {
         $total = 0;
         $productsInCart = [];
-
         $productsInSession = $request->session()->get(self::SESSION_KEY_PRODUCTS);
+
         if ($productsInSession) {
             $productsInCart = Product::findMany(array_keys($productsInSession));
             $total = Product::sumPricesByQuantities($productsInCart, $productsInSession);
         }
+
         $viewData = [
-            'title' => 'Cart',
+            'title' => 'Shopping Cart',
             'total' => $total,
             'products' => $productsInCart,
         ];
 
-        return view('cart.index')->with('viewData', $viewData);
+        return view('cart.index')->with("viewData", $viewData);
     }
 
     public function add(Request $request, $id)
@@ -33,7 +34,6 @@ class CartController extends Controller
         $products = $request->session()->get(self::SESSION_KEY_PRODUCTS);
         $products[$id] = $request->input('quantity');
         $request->session()->put(self::SESSION_KEY_PRODUCTS, $products);
-
         return redirect()->route('cart.index');
     }
 

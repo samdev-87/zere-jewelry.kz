@@ -38,4 +38,14 @@ class Product extends Model
             'image' => 'image'
         ]);
     }
+
+    public static function sumPricesByQuantities($products, $productsInSession)
+    {
+        $total = 0;
+        foreach ($products as $product) {
+            $total = $total + ($product->price * $productsInSession[$product->id]);
+        }
+
+        return $total;
+    }
 }
