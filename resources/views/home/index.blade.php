@@ -182,6 +182,299 @@
                                                 </div>
                                             </div>
                                         @endforeach
+
+                                        {{-- TEST --}}
+                                        <div class="custom-col-5">
+                                            <div class="single_product">
+                                                <div class="product_thumb">
+                                                    <a class="primary_img" href="product-details.html">
+                                                        <img src="{{ asset('img/product/product1.jpg') }}" alt="">
+                                                    </a>
+                                                    <a class="secondary_img" href="product-details.html">
+                                                        <img src="{{ asset('img/product/product2.jpg') }}" alt="">
+                                                    </a>
+                                                    <div class="quick_button">
+                                                        <a href="index.html#" data-bs-toggle="modal"
+                                                           data-bs-target="#modal_box" data-placement="top"
+                                                           data-original-title="quick view"> quick view</a>
+                                                    </div>
+                                                </div>
+                                                <div class="product_content">
+                                                    <div class="tag_cate">
+                                                        <a href="index.html#">Clothing,</a>
+                                                        <a href="index.html#">Potato chips</a>
+                                                    </div>
+                                                    <h3><a href="product-details.html">Aliquam furniture</a></h3>
+                                                    <div class="price_box">
+                                                        <span class="old_price">$86.00</span>
+                                                        <span class="current_price">$60.00</span>
+                                                    </div>
+                                                    <div class="product_hover">
+                                                        <div class="product_ratings">
+                                                            <ul>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product_desc">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Fusce posuere metus vitae </p>
+                                                        </div>
+                                                        <div class="action_links">
+                                                            <ul>
+                                                                <li><a href="wishlist.html" data-placement="top"
+                                                                       title="Add to Wishlist" data-bs-toggle="tooltip"><span
+                                                                            class="icon icon-Heart"></span></a></li>
+                                                                <li class="add_to_cart"><a href="cart.html"
+                                                                                           title="add to cart">add to
+                                                                        cart</a></li>
+                                                                <li><a href="compare.html" title="compare"><i
+                                                                            class="ion-ios-settings-strong"></i></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="custom-col-5">
+                                            <div class="single_product">
+                                                <div class="product_thumb">
+                                                    <a class="primary_img" href="product-details.html"><img
+                                                            src="{{ asset('img/product/product3.jpg') }}" alt=""></a>
+                                                    <a class="secondary_img" href="product-details.html"><img
+                                                            src="{{ asset('img/product/product4.jpg') }}" alt=""></a>
+                                                    <div class="quick_button">
+                                                        <a href="index.html#" data-bs-toggle="modal"
+                                                           data-bs-target="#modal_box" data-placement="top"
+                                                           data-original-title="quick view"> quick view</a>
+                                                    </div>
+                                                </div>
+                                                <div class="product_content">
+                                                    <div class="tag_cate">
+                                                        <a href="index.html#">Clothing,</a>
+                                                        <a href="index.html#">Potato chips</a>
+                                                    </div>
+                                                    <h3><a href="product-details.html">Dummy animal</a></h3>
+                                                    <div class="price_box">
+                                                        <span class="current_price">$65.00</span>
+                                                    </div>
+                                                    <div class="product_hover">
+                                                        <div class="product_ratings">
+                                                            <ul>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product_desc">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Fusce posuere metus vitae </p>
+                                                        </div>
+                                                        <div class="action_links">
+                                                            <ul>
+                                                                <li><a href="wishlist.html" title="Wishlist"><span
+                                                                            class="icon icon-Heart"></span></a></li>
+                                                                <li class="add_to_cart"><a href="cart.html"
+                                                                                           title="add to cart">add to
+                                                                        cart</a></li>
+                                                                <li><a href="compare.html" title="compare"><i
+                                                                            class="ion-ios-settings-strong"></i></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="custom-col-5">
+                                            <div class="single_product">
+                                                <div class="product_thumb">
+                                                    <a class="primary_img" href="product-details.html"><img
+                                                            src="{{ asset('img/product/product5.jpg') }}" alt=""></a>
+                                                    <a class="secondary_img" href="product-details.html"><img
+                                                            src="{{ asset('img/product/product6.jpg') }}" alt=""></a>
+                                                    <div class="quick_button">
+                                                        <a href="index.html#" data-bs-toggle="modal"
+                                                           data-bs-target="#modal_box" data-placement="top"
+                                                           data-original-title="quick view"> quick view</a>
+                                                    </div>
+                                                </div>
+                                                <div class="product_content">
+                                                    <div class="tag_cate">
+                                                        <a href="index.html#">Women</a>
+                                                    </div>
+                                                    <h3><a href="product-details.html">Furniture</a></h3>
+                                                    <div class="price_box">
+                                                        <span class="old_price">$65.00</span>
+                                                        <span class="current_price">$60.00</span>
+                                                    </div>
+                                                    <div class="product_hover">
+                                                        <div class="product_ratings">
+                                                            <ul>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product_desc">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Fusce posuere metus vitae arcu imperdiet</p>
+                                                        </div>
+                                                        <div class="action_links">
+                                                            <ul>
+                                                                <li><a href="wishlist.html" title="Wishlist"><span
+                                                                            class="icon icon-Heart"></span></a></li>
+                                                                <li class="add_to_cart"><a href="cart.html"
+                                                                                           title="add to cart">add to
+                                                                        cart</a></li>
+                                                                <li><a href="compare.html" title="compare"><i
+                                                                            class="ion-ios-settings-strong"></i></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="custom-col-5">
+                                            <div class="single_product">
+                                                <div class="product_thumb">
+                                                    <a class="primary_img" href="product-details.html"><img
+                                                            src="{{ asset('img/product/product7.jpg') }}" alt=""></a>
+                                                    <a class="secondary_img" href="product-details.html"><img
+                                                            src="{{ asset('img/product/product8.jpg') }}" alt=""></a>
+                                                    <div class="quick_button">
+                                                        <a href="index.html#" data-bs-toggle="modal"
+                                                           data-bs-target="#modal_box" data-placement="top"
+                                                           data-original-title="quick view"> quick view</a>
+                                                    </div>
+                                                </div>
+                                                <div class="product_content">
+                                                    <div class="tag_cate">
+                                                        <a href="index.html#">Men,</a>
+                                                    </div>
+                                                    <h3><a href="product-details.html">Letraset animal</a></h3>
+                                                    <div class="price_box">
+                                                        <span class="old_price">$60.00</span>
+                                                        <span class="current_price">$55.00</span>
+                                                    </div>
+                                                    <div class="product_hover">
+                                                        <div class="product_ratings">
+                                                            <ul>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product_desc">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Fusce posuere metus vitae </p>
+                                                        </div>
+                                                        <div class="action_links">
+                                                            <ul>
+                                                                <li><a href="wishlist.html" title="Wishlist"><span
+                                                                            class="icon icon-Heart"></span></a></li>
+                                                                <li class="add_to_cart"><a href="cart.html"
+                                                                                           title="add to cart">add to
+                                                                        cart</a></li>
+                                                                <li><a href="compare.html" title="compare"><i
+                                                                            class="ion-ios-settings-strong"></i></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="custom-col-5">
+                                            <div class="single_product">
+                                                <div class="product_thumb">
+                                                    <a class="primary_img" href="product-details.html"><img
+                                                            src="{{ asset('img/product/product9.jpg') }}" alt=""></a>
+                                                    <a class="secondary_img" href="product-details.html"><img
+                                                            src="{{ asset('img/product/product10.jpg') }}"
+                                                            alt=""></a>
+                                                    <div class="quick_button">
+                                                        <a href="index.html#" data-bs-toggle="modal"
+                                                           data-bs-target="#modal_box" data-placement="top"
+                                                           data-original-title="quick view"> quick view</a>
+                                                    </div>
+                                                </div>
+                                                <div class="product_content">
+                                                    <div class="tag_cate">
+                                                        <a href="index.html#">Women</a>
+                                                    </div>
+                                                    <h3><a href="product-details.html">Aliquam furniture</a></h3>
+                                                    <div class="price_box">
+                                                        <span class="old_price">$80.00</span>
+                                                        <span class="current_price">$60.00</span>
+                                                    </div>
+                                                    <div class="product_hover">
+                                                        <div class="product_ratings">
+                                                            <ul>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                                <li><a href="index.html#"><i
+                                                                            class="ion-ios-star-outline"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product_desc">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Fusce posuere metus vitae </p>
+                                                        </div>
+                                                        <div class="action_links">
+                                                            <ul>
+                                                                <li><a href="wishlist.html" title="Wishlist"><span
+                                                                            class="icon icon-Heart"></span></a></li>
+                                                                <li class="add_to_cart"><a href="cart.html"
+                                                                                           title="add to cart">add to
+                                                                        cart</a></li>
+                                                                <li><a href="compare.html" title="compare"><i
+                                                                            class="ion-ios-settings-strong"></i></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {{-- TEST --}}
                                     </div>
                                 </div>
                             </div>
