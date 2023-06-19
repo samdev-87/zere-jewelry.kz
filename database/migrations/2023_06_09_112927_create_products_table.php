@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('article', 50);
             $table->string('name', 150);
-            $table->text('description');
-            $table->string('parent', 150)->nullable();
-            $table->string('image');
-            $table->integer('price');
+            $table->text('description')->nullable();
+            $table->string('slug', 150)->unique();
+            $table->string('image', 50)->nullable();
+            $table->decimal('price', 10, 2, true)->default(0);
             $table->timestamps();
         });
     }
