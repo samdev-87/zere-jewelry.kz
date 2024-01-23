@@ -52,7 +52,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">&nbsp;</div>
+                    <div class="col">
+                        @if($viewData['product']->image)
+                            <img class="img-fluid" src="{{ asset('/storage/' . $viewData['product']->image) }}" alt="">
+                        @endif
+                    </div>
                 </div>
 
                 <div class="mb-3">

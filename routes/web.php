@@ -14,10 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home.index');
+
 Route::get('/products', 'App\Http\Controllers\ProductController@index')->name('product.index');
 Route::get('/products/{id}', 'App\Http\Controllers\ProductController@show')->name('product.show');
-Route::get('/blog', 'App\Http\Controllers\ProductController@index')->name('blog.index');
-Route::get('/news', 'App\Http\Controllers\ProductController@index')->name('news.index');
 
 Route::get('/admin', 'App\Http\Controllers\admin\AdminHomeController@index')->name('admin.home.index');
 Route::middleware('admin')->group(function () {
