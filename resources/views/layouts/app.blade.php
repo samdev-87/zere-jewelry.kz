@@ -247,7 +247,7 @@
                                 <ul>
                                     <li class="active"><a href="{{ route('home.index') }}">Басты бет</a></li>
                                     <li><a href="{{ route('product.index') }}">Өнімдер</a></li>
-                                    <li><a href="{{ route('news.index') }}">жаңалықтар</a></li>
+{{--                                    <li><a href="{{ route('news.index') }}">жаңалықтар</a></li>--}}
                                     <li><a href="#">Біз туралы</a></li>
                                     <li><a href="#">Байланыс</a></li>
                                 </ul>
