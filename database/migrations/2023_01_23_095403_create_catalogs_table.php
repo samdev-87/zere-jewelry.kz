@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('catalogs', function (Blueprint $table) {
             $table->uuid()->primary();
             $table->string('name');
+            $table->string('picture_path');
             $table->timestamps();
         });
     }
