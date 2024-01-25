@@ -12,15 +12,18 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->uuid()->primary();
+            $table->id();
+            $table->uuid()->index()->unique();
             $table->string('name');
             $table->string('vendor', 50);
-            $table->string('size', 25);
-            $table->decimal('average_weight');
-            $table->string('insert', 50);
-            $table->string('sample', 10);
-            $table->string('picture_path');
-            $table->foreignUlid('catalog_uuid')->constrained('catalogs', 'uuid');
+            $table->string('size', 25)->nullable();
+            $table->decimal('average_weight')->nullable();
+            $table->string('insert', 50)->nullable();
+            $table->string('sample', 10)->nullable();
+            $table->string('picture_path')->nullable();
+            $table->unsignedBigInteger('catalog_id');
+            $table->foreign('catalog_id')->references('id')->on('catalogs');
+            $table->boolean('new');
             $table->timestamps();
         });
     }

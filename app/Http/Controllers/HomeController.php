@@ -11,7 +11,7 @@ class HomeController extends Controller
     {
         $viewData = [];
         $viewData["title"] = "Home Page - Online Store";
-        $viewData['products'] = Product::all();
+        $viewData['products'] = Product::take(10)->get(); // ->inRandomOrder()
         return view('home.index')->with('viewData', $viewData);
     }
 }

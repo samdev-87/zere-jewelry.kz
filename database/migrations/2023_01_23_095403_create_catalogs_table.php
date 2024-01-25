@@ -12,9 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('catalogs', function (Blueprint $table) {
-            $table->uuid()->primary();
+            $table->id();
+            $table->uuid()->index()->unique();
             $table->string('name');
-            $table->string('picture_path');
+            $table->string('picture_path')->nullable();
             $table->timestamps();
         });
     }
