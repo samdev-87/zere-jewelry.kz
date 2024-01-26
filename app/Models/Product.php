@@ -10,7 +10,7 @@ class Product extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['uuid', 'name', 'vendor', 'size', 'average_weight', 'insert', 'sample', 'picture_path', 'catalog_id'];
+    protected $fillable = ['uuid', 'name', 'vendor', 'size', 'average_weight', 'insert', 'sample', 'picture_path', 'catalog_id', 'new', 'p_group'];
 
     public function catalog(): BelongsTo
     {

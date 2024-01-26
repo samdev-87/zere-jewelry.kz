@@ -56,6 +56,7 @@ class ProductController extends Controller
                     'sample' => $item['sample'],
                     'catalog_id' => array_key_exists($item['catuid'], $cat_arr) ? $cat_arr[$item['catuid']]->id : null,
                     'new' => $item['new'],
+                    'p_group' => $item['pricegroup']
                 ]
             );
         }
