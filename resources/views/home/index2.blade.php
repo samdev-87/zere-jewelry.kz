@@ -60,21 +60,21 @@
     <div class="container">
         <h2 class="text-center m-5">Наши ассортимент</h2>
 
-        @for($i = -1; $i < count($viewData['catalogs']);  $i+=3)
+        @for($i = 0; $i < count($viewData['catalogs']);  $i+=3)
             <div class="row mb-3">
                 <div class="col text-center">
-                    <h3>{{ $viewData['catalogs'][$i+1]->name }}</h3>
+                    <h3><a href="{{ route('catalog.products', ['uuid' => $viewData['catalogs'][$i]->uuid]) }}">{{ $viewData['catalogs'][$i]->name }}</a></h3>
                     <img src="https://via.placeholder.com/376x331" alt="" class="img-fluid">
                 </div>
-                @if(isset($viewData['catalogs'][$i+2]))
+                @if(isset($viewData['catalogs'][$i+1]))
                     <div class="col text-center">
-                        <h3>{{ $viewData['catalogs'][$i+2]->name }}</h3>
+                        <h3><a href="{{ route('catalog.products', ['uuid' => $viewData['catalogs'][$i+1]->uuid]) }}">{{ $viewData['catalogs'][$i+1]->name }}</a></h3>
                         <img src="https://via.placeholder.com/376x331" alt="" class="img-fluid">
                     </div>
                 @endif
-                @if(isset($viewData['catalogs'][$i+3]))
+                @if(isset($viewData['catalogs'][$i+2]))
                     <div class="col text-center">
-                        <h3>{{ $viewData['catalogs'][$i+3]->name }}</h3>
+                        <h3><a href="{{ route('catalog.products', ['uuid' => $viewData['catalogs'][$i+2]->uuid]) }}">{{ $viewData['catalogs'][$i+2]->name }}</a></h3>
                         <img src="https://via.placeholder.com/376x331" alt="" class="img-fluid">
                     </div>
                 @endif

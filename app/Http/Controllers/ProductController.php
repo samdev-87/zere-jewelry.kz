@@ -2,36 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Catalog;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public static array $products = [
-        [
-            "id"=>"1",
-            "name"=>"Aliquam furniture",
-            "description"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusceposuere metus vitae ",
-            "img" => [
-                'primary' => 'product/product6.jpg',
-                'secondary' => 'product/product7.jpg',
-            ],
-            "price" => [
-                'old' => 86000,
-                'current' => 60000
-            ],
-            'categories' => [
-                'Clothing',
-                'Potato chips'
-            ],
-        ],
-    ];
-
     public function index()
     {
         $viewData = [
-            'title' => 'Products',
-            'products' => Product::all(),
+            'title' => 'Изделия',
+            'products' => Product::simplePaginate(9),
         ];
 
         return view('product.index')->with('viewData', $viewData);
@@ -47,4 +28,55 @@ class ProductController extends Controller
 
         return view('product.show')->with('viewData', $viewData);
     }
+
+    public function list()
+    {
+        $products = Product::query();
+
+        if (!empty($_GET['categories'])) {
+            $slugs = explode(',', $_GET['categories']);
+            $cat_ids = Catalog::select('id')->whereIn('slug', $slugs)->pluck('id')->toArray();
+            $products->whereIn('cat_id', $cat_ids);
+        }
+
+        if (!empty($_GET['price'])) {
+            $prices = explode('-', $_GET['price']);
+            // return $prices;
+            // if(isset($prices[0]) && is_numeric($prices[0])) $prices[0]=floor(Helper::base_amount($prices[0]));
+            // if(isset($prices[1]) && is_numeric($prices[1])) $prices[1]=ceil(Helper::base_amount($prices[1]));
+            $products->whereBetween('price', $prices);
+        }
+
+        $viewData = [
+            'title' => 'Изделия',
+            'products' => $products,
+        ];
+
+        return view('product.index')->with('viewData', $viewData);
+    }
+
+    public function filter(Request $request)
+    {
+        $data = $request->all();
+        $showURL= "";
+        $catURL = "";
+        $priceRangeURL="";
+
+        if (!empty($data['categories'])) {
+            foreach ($data['categories'] as $category) {
+                if ($catURL == "") {
+                    $catURL .= '&categories='.$category;
+                } else {
+                    $catURL .= ','.$category;
+                }
+            }
+        }
+
+        if (!empty($data['price_range'])) {
+            $priceRangeURL .='&price='.$data['price_range'];
+        }
+
+        return redirect()->route('products', $catURL . $priceRangeURL);
+    }
+
 }

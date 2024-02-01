@@ -16,4 +16,9 @@ class Catalog extends Model
     {
         return $this->hasMany(Product::class);
     }
+
+    public static function getProductsByUuid($uuid)
+    {
+        return self::with('products')->where('uuid', $uuid)->first();
+    }
 }

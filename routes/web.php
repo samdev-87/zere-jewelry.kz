@@ -14,9 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home.index');
+Route::get('/contacts', 'App\Http\Controllers\HomeController@contacts')->name('home.contacts');
+Route::get('/collaboration', 'App\Http\Controllers\HomeController@collaboration')->name('home.collaboration');
+Route::get('/product-detail/{uuid}', 'App\Http\Controllers\HomeController@productDetail')->name('home.product-detail');
 
 Route::get('/products', 'App\Http\Controllers\ProductController@index')->name('product.index');
 Route::get('/products/{id}', 'App\Http\Controllers\ProductController@show')->name('product.show');
+
+Route::get('/catalogs', 'App\Http\Controllers\CatalogController@index')->name('catalog.index');
+Route::get('/cat-products/{uuid}', 'App\Http\Controllers\HomeController@catalogProducts')->name('catalog.products');
+
+Route::match(['get','post'], '/filter', 'ProductController@filter')->name('product.filter');
 
 Route::get('/admin', 'App\Http\Controllers\admin\AdminHomeController@index')->name('admin.home.index');
 Route::middleware('admin')->group(function () {

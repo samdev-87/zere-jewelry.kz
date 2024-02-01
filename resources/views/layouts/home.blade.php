@@ -53,10 +53,10 @@
 
     <div class="nav-scroller py-1 mb-3 border-bottom">
         <nav class="nav nav-underline justify-content-around">
-            <a class="nav-item nav-link link-body-emphasis active" href="#">Главная</a>
-            <a class="nav-item nav-link link-body-emphasis" href="#">Каталог</a>
-            <a class="nav-item nav-link link-body-emphasis" href="#">Сотрудничетво</a>
-            <a class="nav-item nav-link link-body-emphasis" href="#">Контакты</a>
+            <a class="nav-item nav-link link-body-emphasis active" href="/">Главная</a>
+            <a class="nav-item nav-link link-body-emphasis" href="{{ route('catalog.index') }}">Каталог</a>
+            <a class="nav-item nav-link link-body-emphasis" href="{{ route('home.collaboration') }}">Сотрудничетво</a>
+            <a class="nav-item nav-link link-body-emphasis" href="{{ route('home.contacts') }}">Контакты</a>
         </nav>
     </div>
 </div>
@@ -73,10 +73,10 @@
             </div>
             <div class="col-6">
                 <nav class="nav flex-column">
-                    <a class="nav-item nav-link active" href="#">Главная</a>
-                    <a class="nav-item nav-link" href="#">Каталог</a>
-                    <a class="nav-item nav-link" href="#">Сотрудничетво</a>
-                    <a class="nav-item nav-link" href="#">Контакты</a>
+                    <a class="nav-item nav-link active" href="/">Главная</a>
+                    <a class="nav-item nav-link" href="{{ route('catalog.index') }}">Каталог</a>
+                    <a class="nav-item nav-link" href="{{ route('home.collaboration') }}">Сотрудничетво</a>
+                    <a class="nav-item nav-link" href="{{ route('home.contacts') }}">Контакты</a>
                 </nav>
             </div>
             <div class="col-3 text-center">
