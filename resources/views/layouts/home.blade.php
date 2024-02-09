@@ -30,7 +30,7 @@
     <header class="border-bottom lh-1 py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
             <div class="col-4 pt-1">
-                <a class="link-secondary" href="tel:77071210987">+7 707 121 09 87</a>
+                {{--<a class="link-secondary" href="tel:77071210987">+7 707 121 09 87</a>--}}
             </div>
             <div class="col-4 text-center">
                 <a class="blog-header-logo text-body-emphasis text-decoration-none" href="{{ route('home.index') }}">
@@ -72,7 +72,7 @@
                 <p>&copy; 2016-2024</p>
             </div>
             <div class="col-6">
-                <nav class="nav flex-column">
+                <nav class="nav flex-column text-white-50">
                     <a class="nav-item nav-link active" href="/">Главная</a>
                     <a class="nav-item nav-link" href="{{ route('catalog.index') }}">Каталог</a>
                     <a class="nav-item nav-link" href="{{ route('home.collaboration') }}">Сотрудничетво</a>
@@ -81,6 +81,10 @@
             </div>
             <div class="col-3 text-center">
                 <a href="tel:77071210987">+7 707 121 09 87</a>
+                <div>
+                    <a href="#"><i class="fa fa-2x fa-telegram text-white m-2"></i></a>
+                    <a href="#"><i class="fa fa-2x fa-whatsapp text-white m-2"></i></a>
+                </div>
             </div>
         </div>
     </div>

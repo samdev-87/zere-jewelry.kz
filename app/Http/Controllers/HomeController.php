@@ -13,7 +13,7 @@ class HomeController extends Controller
         $viewData = [];
         $viewData["title"] = "Главная Страница - Zere";
         $viewData['catalogs'] = Catalog::all();
-        $viewData['products'] = Product::take(4)->where('new', 1)->get();
+        $viewData['products'] = Product::where('new', 1)->get();
         return view('home.index2')->with('viewData', $viewData);
     }
 

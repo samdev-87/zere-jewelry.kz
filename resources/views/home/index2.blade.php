@@ -4,6 +4,21 @@
 
 @section('content')
 
+    <style>
+        .carousel-caption {
+            font-weight: 600;
+            width: 450px;
+            height: 350px;
+            top: 65px;
+            left: 700px;
+            border-radius: 10px;
+            background: rgba(217, 217, 217, 0.58);
+        }
+        .fz3h {
+            font-size: 3.5rem;
+        }
+    </style>
+
     <div class="container">
         <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators">
@@ -14,23 +29,26 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="{{ asset('/img/slider/banner-1.jpg') }}" class="d-block w-100" alt="banner-1">
-                    <div class="carousel-caption d-none d-md-block text-end">
-                        <h3>18 500 тг/гр</h3>
-                        <p>Цена на сегодняшний день <span class="text-warning">Золото проба 585</span></p>
+                    <div class="carousel-caption d-flex flex-column justify-content-end align-items-start text-start p-5 fs-4">
+                        <p>Цена на сегодняшний день</p>
+                        <span class="bg-warning px-4 py-1 d-inline-block">Золото проба 585</span>
+                        <p class="fz3h lh-1 mt-1">18 500 тг/гр</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="{{ asset('/img/slider/banner-1.jpg') }}" class="d-block w-100" alt="banner-1">
-                    <div class="carousel-caption d-none d-md-block text-end">
-                        <h3>18 500 тг/гр</h3>
-                        <p>Цена на сегодняшний день <span class="text-warning">Золото проба 585</span></p>
+                    <div class="carousel-caption d-flex flex-column justify-content-end align-items-start text-start p-5 fs-4">
+                        <p>Цена на сегодняшний день</p>
+                        <span class="bg-warning px-4 py-1 d-inline-block">Золото проба 585</span>
+                        <p class="fz3h lh-1 mt-1">18 500 тг/гр</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="{{ asset('/img/slider/banner-1.jpg') }}" class="d-block w-100" alt="banner-1">
-                    <div class="carousel-caption d-none d-md-block text-end">
-                        <h3>18 500 тг/гр</h3>
-                        <p>Цена на сегодняшний день <span class="text-warning">Золото проба 585</span></p>
+                    <div class="carousel-caption d-flex flex-column justify-content-end align-items-start text-start p-5 fs-4">
+                        <p>Цена на сегодняшний день</p>
+                        <span class="bg-warning px-4 py-1 d-inline-block">Золото проба 585</span>
+                        <p class="fz3h lh-1 mt-1">18 500 тг/гр</p>
                     </div>
                 </div>
             </div>
@@ -64,18 +82,30 @@
             <div class="row mb-3">
                 <div class="col text-center">
                     <h3><a href="{{ route('catalog.products', ['uuid' => $viewData['catalogs'][$i]->uuid]) }}">{{ $viewData['catalogs'][$i]->name }}</a></h3>
-                    <img src="https://via.placeholder.com/376x331" alt="" class="img-fluid">
+                    @if(file_exists(public_path('img/catalog/' . $viewData['catalogs'][$i]->uuid . '.png')))
+                        <img src="{{ asset('img/catalog/' . $viewData['catalogs'][$i]->uuid . '.png') }}" alt="" class="img-fluid">
+                    @else
+                        <img src="https://via.placeholder.com/376x331" alt="" class="img-fluid">
+                    @endif
                 </div>
                 @if(isset($viewData['catalogs'][$i+1]))
                     <div class="col text-center">
                         <h3><a href="{{ route('catalog.products', ['uuid' => $viewData['catalogs'][$i+1]->uuid]) }}">{{ $viewData['catalogs'][$i+1]->name }}</a></h3>
-                        <img src="https://via.placeholder.com/376x331" alt="" class="img-fluid">
+                        @if(file_exists(public_path('img/catalog/' . $viewData['catalogs'][$i+1]->uuid . '.png')))
+                            <img src="{{ asset('img/catalog/' . $viewData['catalogs'][$i+1]->uuid . '.png') }}" alt="" class="img-fluid">
+                        @else
+                            <img src="https://via.placeholder.com/376x331" alt="" class="img-fluid">
+                        @endif
                     </div>
                 @endif
                 @if(isset($viewData['catalogs'][$i+2]))
                     <div class="col text-center">
                         <h3><a href="{{ route('catalog.products', ['uuid' => $viewData['catalogs'][$i+2]->uuid]) }}">{{ $viewData['catalogs'][$i+2]->name }}</a></h3>
-                        <img src="https://via.placeholder.com/376x331" alt="" class="img-fluid">
+                        @if(file_exists(public_path('img/catalog/' . $viewData['catalogs'][$i+2]->uuid . '.png')))
+                            <img src="{{ asset('img/catalog/' . $viewData['catalogs'][$i+2]->uuid . '.png') }}" alt="" class="img-fluid">
+                        @else
+                            <img src="https://via.placeholder.com/376x331" alt="" class="img-fluid">
+                        @endif
                     </div>
                 @endif
             </div>
@@ -87,36 +117,30 @@
 
         <div class="row mb-3">
             <div class="col text-center">
-                <div class="h2">1</div>
-                <i class="fa fa-3x fa-flag"></i>
-                <h4>Местное производство</h4>
+                <i class="fa fa-4x fa-flag"></i>
+                <h4 class="mt-4 mb-4">Местное производство</h4>
             </div>
             <div class="col text-center">
-                <div class="h2">2</div>
-                <i class="fa fa-3x fa-bank"></i>
-                <h4>Большой ассортимент</h4>
+                <i class="fa fa-4x fa-bank"></i>
+                <h4 class="mt-4 mb-4">Большой ассортимент</h4>
             </div>
             <div class="col text-center">
-                <div class="h2">3</div>
-                <i class="fa fa-3x fa-gift"></i>
-                <h4>Индивидуальные условия</h4>
+                <i class="fa fa-4x fa-gift"></i>
+                <h4 class="mt-4 mb-4">Индивидуальные условия</h4>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col text-center">
-                <div class="h2">4</div>
-                <i class="fa fa-3x fa-ship"></i>
-                <h4>Любые объемы доставки</h4>
+                <i class="fa fa-4x fa-ship"></i>
+                <h4 class="mt-4 mb-4">Любые объемы доставки</h4>
             </div>
             <div class="col text-center">
-                <div class="h2">5</div>
-                <i class="fa fa-3x fa-star"></i>
-                <h4>Новинки каждый месяц</h4>
+                <i class="fa fa-4x fa-star"></i>
+                <h4 class="mt-4 mb-4">Новинки каждый месяц</h4>
             </div>
             <div class="col text-center">
-                <div class="h2">6</div>
-                <i class="fa fa-3x fa-home"></i>
-                <h4>Гарантия качества</h4>
+                <i class="fa fa-4x fa-home"></i>
+                <h4 class="mt-4 mb-4">Гарантия качества</h4>
             </div>
         </div>
     </div>
